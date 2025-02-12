@@ -28,7 +28,7 @@ author:
   bio              : "PhD student in Statistics at UT Austin"
   location         : "Austin, TX"
   employer         : "UT Austin"
-  uri              : # URL
+  uri              : "https://www.ritwikvashistha.com/"
   email            : "ritwik.v@utexas.edu" 
 
   # Academic websites
@@ -111,7 +111,7 @@ og_image                 :  # Open Graph/Twitter default site image
 social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
-  links: "https://www.ritwikvashistha.com/"
+  links: 
 
 
 # Analytics
