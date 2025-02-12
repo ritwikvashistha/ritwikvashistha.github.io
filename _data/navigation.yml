@@ -12,11 +12,11 @@ main:
     url: /talks/    
 
   - title: "Teaching"
-    url: /teaching/2022-teaching-1    
+    url: /teaching/2022-teaching-1.md   
   
         
   - title: "Blog Posts"
     url: /year-archive/
     
   - title: "Resume"
-    url: /files/Ritwik_Resume-2025
+    url: /files/Ritwik_Resume-2025.pdf
