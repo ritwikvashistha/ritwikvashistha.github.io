@@ -1,14 +1,14 @@
 ---
-title: "Paper Title Number 1"
+title: "I-trustworthy Models. A framework for trustworthiness evaluation of probabilistic classifiers"
 collection: publications
 category: manuscripts
-permalink: /publication/2009-10-01-paper-title-number-1
-excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-date: 2009-10-01
-venue: 'Journal 1'
-slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
-paperurl: 'http://academicpages.github.io/files/paper1.pdf'
-citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
+permalink: /publication/i-trustworthy
+excerpt: 'This paper is about connecting trustworthiness of probabilistic classifiers to local calibration'
+date: 2025-1-26
+venue: 'To appear in PMLR'
+slidesurl: ''
+paperurl: 'https://arxiv.org/abs/2501.15617'
+citation: 'Vashistha, Ritwik, and Arya Farahi. "I-trustworthy Models. A framework for trustworthiness evaluation of probabilistic classifiers." arXiv preprint arXiv:2501.15617 (2025).'
 ---
 
-The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
+As probabilistic models continue to permeate various facets of our society and contribute to scientific advancements, it becomes a necessity to go beyond traditional metrics such as predictive accuracy and error rates and assess their trustworthiness. Grounded in the competence-based theory of trust, this work formalizes I-trustworthy framework -- a novel framework for assessing the trustworthiness of probabilistic classifiers for inference tasks by linking local calibration to trustworthiness. To assess I-trustworthiness, we use the local calibration error (LCE) and develop a method of hypothesis-testing. This method utilizes a kernel-based test statistic, Kernel Local Calibration Error (KLCE), to test local calibration of a probabilistic classifier. This study provides theoretical guarantees by offering convergence bounds for an unbiased estimator of KLCE. Additionally, we present a diagnostic tool designed to identify and measure biases in cases of miscalibration. The effectiveness of the proposed test statistic is demonstrated through its application to both simulated and real-world datasets. Finally, LCE of related recalibration methods is studied, and we provide evidence of insufficiency of existing methods to achieve I-trustworthiness.
