@@ -3,9 +3,9 @@ title: "I-trustworthy Models. A framework for trustworthiness evaluation of prob
 collection: publications
 category: manuscripts
 permalink: /publication/i-trustworthy
-excerpt: 'This paper is about connecting trustworthiness of probabilistic classifiers to local calibration'
+excerpt: 'This paper connects trustworthiness of probabilistic classifiers to local calibration.'
 date: 2025-1-26
-venue: 'Accepted at AISTATS 2025, to appear in PMLR'
+venue: 'AISTATS 2025+'
 slidesurl: ''
 paperurl: 'https://arxiv.org/abs/2501.15617'
 ---
