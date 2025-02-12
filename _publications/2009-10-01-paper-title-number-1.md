@@ -5,7 +5,7 @@ category: manuscripts
 permalink: /publication/i-trustworthy
 excerpt: 'This paper is about connecting trustworthiness of probabilistic classifiers to local calibration'
 date: 2025-1-26
-venue: 'To appear in PMLR'
+venue: 'Accepted at AISTATS 2025, to appear in PMLR'
 slidesurl: ''
 paperurl: 'https://arxiv.org/abs/2501.15617'
 citation: 'Vashistha, Ritwik, and Arya Farahi. "I-trustworthy Models. A framework for trustworthiness evaluation of probabilistic classifiers." arXiv preprint arXiv:2501.15617 (2025).'
