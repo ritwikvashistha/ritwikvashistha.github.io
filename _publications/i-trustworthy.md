@@ -5,7 +5,7 @@ category: manuscripts
 permalink: /publication/i-trustworthy
 excerpt: 'This paper connects trustworthiness of probabilistic classifiers to local calibration.'
 date: 2025-1-26
-venue: 'AISTATS 2025+'
+venue: 'AISTATS*'
 slidesurl: ''
 paperurl: 'https://arxiv.org/abs/2501.15617'
 ---
