@@ -11,14 +11,37 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- Single heading for all publications -->
-<h2>Articles (Journals, Conferences and Preprints)</h2>
+<!-- Introduction Section -->
+<h2>About My Research</h2>
+<p>
+  My research focuses on [your research domain], particularly in areas such as [specific topics]. 
+  I work on developing novel methodologies, applying computational techniques, and contributing to both theoretical 
+  and applied advancements in the field.
+</p>
 <hr />
 
-<!-- Render all publications in reverse order -->
+<!-- Publications Section -->
+<h2>Articles (Journals, Conferences, and Preprints)</h2>
+<hr />
+
 {% for post in site.publications reversed %}
-  {% include archive-single.html %}
+  <div class="publication-entry">
+    <h3>{{ post.title }}</h3>
+    <p><strong>Authors:</strong> {{ post.authors }}</p>
+    <p><strong>Venue:</strong> 
+      {% if post.status == "published" %}
+        Published in {{ post.venue }}
+      {% elsif post.status == "to_appear" %}
+        To appear in {{ post.venue }}
+      {% elsif post.status == "arxiv" %}
+        <a href="{{ post.arxiv_link }}">arXiv preprint</a>
+      {% else %}
+        {{ post.venue }}
+      {% endif %}
+    </p>
+    {% if post.paper_link %}
+      <p><a href="{{ post.paper_link }}">[PDF]</a></p>
+    {% endif %}
+    <hr />
+  </div>
 {% endfor %}
-
-
-
