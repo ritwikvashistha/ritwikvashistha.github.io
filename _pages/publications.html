@@ -42,6 +42,8 @@ author_profile: true
     {% if post.paper_link %}
       <p><a href="{{ post.paper_link }}">[PDF]</a></p>
     {% endif %}
+    <p><strong>Excerpt:</strong> {{ post.excerpt | strip_html }}</p>
+    <p><a href="{{ post.url }}">Read more...</a></p>
     <hr />
   </div>
 {% endfor %}
