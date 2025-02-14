@@ -2,7 +2,7 @@
 title: "I-trustworthy Models. A framework for trustworthiness evaluation of probabilistic classifiers"
 authors: "Author A, Author B"
 venue: 'Proceedings of Machine Learning Research (AISTATS)'
-year: 2025
+date: 2025-26-01
 status: "to_appear"
 paper_link: "https://arxiv.org/abs/2501.15617"
 layout: archive
