@@ -10,7 +10,7 @@
 
 @import 
     "vendor/breakpoint/breakpoint",
-
+    "minimal-mistakes/skins/neon",
     "themes",
     "theme/{{ site.site_theme | default: 'default' }}",
 
