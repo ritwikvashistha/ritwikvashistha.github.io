@@ -5,6 +5,8 @@ category: preprints
 permalink: /publication/effect-heterogeneity
 excerpt: 'This paper looks at how different modelling choices affect treatment effect heterogeneity for earth observation data'
 date: 2024-07-16
+venue: 'arXiv'
+status: 'arxiv'
 paperurl: 'https://arxiv.org/abs/2407.11674'
 ---
 
