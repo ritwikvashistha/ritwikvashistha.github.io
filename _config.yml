@@ -109,8 +109,6 @@ social:
   name                   : # If the user or organization name differs from the site's name
   links: 
 
-theme_settings:
-  dark_mode: true
   
 # Analytics
 analytics:
