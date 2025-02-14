@@ -14,8 +14,6 @@
     "themes",
     "theme/{{ site.site_theme | default: 'default' }}",
 
-    "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}", // skin
-
     "include/mixins",
     "vendor/susy/susy",
 
