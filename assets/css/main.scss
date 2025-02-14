@@ -40,3 +40,28 @@
     "vendor/font-awesome/brands",
     "vendor/magnific-popup/magnific-popup"
 ;
+/* Default (light) mode styles */
+body {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Adjust links */
+a {
+  color: #007acc;
+}
+
+body.dark-mode a {
+  color: #66aaff;
+}
+
+/* Adjust other elements as needed */
+.container {
+  background-color: inherit;  /* or a specific color */
+}
