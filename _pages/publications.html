@@ -5,24 +5,25 @@ permalink: /research/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
 
 {% include base_path %}
 
 <!-- Introduction Section -->
 <h2>About My Research</h2>
 <p>
-  My research focuses on [your research domain], particularly in areas such as [specific topics]. 
-  I work on developing novel methodologies, applying computational techniques, and contributing to both theoretical 
-  and applied advancements in the field.
+  
+My current research focus is on building robust and reliable machine learning models. During my PhD, i have developed frameworks to evaluate trustworthiness of binary classifiers for decision making and doing inference respectively. 
+I am currently working on building hypothesis testing and learning methods that can deal with noisy data. 
 </p>
 <hr />
 
 <!-- Publications Section -->
 <h2>Articles (Journals, Conferences, and Preprints)</h2>
 <hr />
+
+{% if site.author.googlescholar %}
+  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+{% endif %}
 
 {% for post in site.publications reversed %}
   <div class="publication-entry">
