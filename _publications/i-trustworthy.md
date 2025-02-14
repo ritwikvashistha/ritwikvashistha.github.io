@@ -5,7 +5,7 @@ venue: 'Proceedings of Machine Learning Research (AISTATS)'
 year: 2025
 status: "to_appear"
 paper_link: "https://arxiv.org/abs/2501.15617"
-layout: archive
+layout: research
 permalink: /publication/i-trustworthy
 excerpt: 'Evaluating trustworthiness of probabilistic classifiers using local calibration.'
 ---
