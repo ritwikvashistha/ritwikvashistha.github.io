@@ -28,6 +28,7 @@ I am currently working on building hypothesis testing and learning methods that 
 {% for post in site.publications reversed %}
   <div class="publication-entry">
     <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+    <p><strong>Date:</strong>  {{ post.date }}</p>
     <p><strong>Venue:</strong> 
       {% if post.status == "published" %}
         Published in {{ post.venue }}
