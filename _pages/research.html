@@ -19,15 +19,15 @@ In the context of predictive models and decision-making, this notion translates 
 <!-- Plots Section -->
 <div style="display: flex; justify-content: space-around; margin-top: 20px;">
   <div>
-    <img src="/images/calibration-plot.png" alt="Plot 1" style="max-width: 33%; height: auto;">
+    <img src="/images/calibration-plot.png" alt="Plot 1" style="max-width: 80%; height: auto;">
     <p>Calibration Plot</p>
   </div>
   <div>
-    <img src="/images/acc-score-plot.png" alt="Plot 2" style="max-width: 33%; height: auto;">
+    <img src="/images/acc-score-plot.png" alt="Plot 2" style="max-width: 100%; height: auto;">
     <p>Accuracy</p>
   </div>
   <div>
-    <img src="/images/brier-score-plot.png" alt="Plot 3" style="max-width: 33%; height: auto;">
+    <img src="/images/brier-score-plot.png" alt="Plot 3" style="max-width: 100%; height: auto;">
     <p>Brier score</p>
   </div>
 </div>
@@ -38,7 +38,7 @@ In U-trustworthiness, we develop a mathematical framework that evaluates the cla
 Now suppose the data scientist wishes to estimate the amount of loan to be given to an approved applicant. Here, the data scientist may also want to make sure that the model takes into account the income such that for approved applicants,  estimated loan amount is higher for applicants with higher income.  In this case, the goal is not ‘decision making’ anymore but to ‘infer’ from data. In such similar cases, where goal is to do ‘inference’, we show in I-trustworthiness that how local calibration is needed to ensure that model is ‘competent’ for doing inference.  We provide a statistically valid metric and a hypothesis test that can help a user evaluate if their model is locally calibrated with respect to some variables in their dataset. 
 <div>
   <img src="/images/motivation_I-trustworthiness.png" alt="Plot 3" style="max-width: 100%; height: auto;">
-  <p>Figure 1 from [I-Trustworthy Paper](https://ritwikvashistha.github.io/publication/i-trustworthy). Consider the task of inferring the average age of homeowners when homeownership status is unknown (test sample), using two models that assign probabilities of homeownership. While Model 1 (blue model) outperforms Model 2 in terms of accuracy, Brier score, and ECE, only Model 2 provides an unbiased estimate of the inference target (right panel). The histograms are based on 200 realizations of test/train samples. } </p>
+  <p>Figure 1 from <a href=https://ritwikvashistha.github.io/publication/i-trustworthy> I-Trustworthy Paper</a>. Consider the task of inferring the average age of homeowners when homeownership status is unknown (test sample), using two models that assign probabilities of homeownership. While Model 1 (blue model) outperforms Model 2 in terms of accuracy, Brier score, and ECE, only Model 2 provides an unbiased estimate of the inference target (right panel). The histograms are based on 200 realizations of test/train samples. } </p>
 </div>
 </p>
 <hr />
