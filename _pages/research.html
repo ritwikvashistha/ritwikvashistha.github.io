@@ -10,9 +10,35 @@ author_profile: true
 <!-- Introduction Section -->
 <h2>About My Research</h2>
 <p>
-  
-My current research focus is on building robust and reliable machine learning models. During my PhD, i have developed frameworks to evaluate trustworthiness of binary classifiers for decision making and doing inference respectively. 
-I am currently working on building hypothesis testing and learning methods that can deal with noisy data. 
+My current research focus is on building trustworthy, causal and robust stats/ML models for decision making and inference. A lot of fancy terms but the overarching goal is to build nice reliable statistical models that give good insights.
+
+<h2>Trustworthy</h2>:
+‘Trustworthiness’ is a broad term that has various facets and can be subjective in practice. In order to study trustworthiness in context of machine learning, I have focused on competence based theories of trust. Here, trust is framed as reliance on a machine or model’s capability to achieve its goals. 
+
+In the context of predictive models and decision-making, this notion translates into our reliance on a model that consistently demonstrates competence in achieving its goal in a decision-making task.  Suppose, a data scientist is interested in using classification models for making some decisions (eg. to give loan or not) and wishes to understand which model (Logistic Regression, XGboost, Neural Networks etc) can be considered ‘trustworthy’. There are multiple choices and often different metrics pick different models.  
+<!-- Plots Section -->
+<div style="display: flex; justify-content: space-around; margin-top: 20px;">
+  <div>
+    <img src="/images/calibration-plot.png" alt="Plot 1" style="max-width: 100%; height: auto;">
+    <p>Plot 1 description</p>
+  </div>
+  <div>
+    <img src="/images/acc-score-plot.png" alt="Plot 2" style="max-width: 100%; height: auto;">
+    <p>Plot 2 description</p>
+  </div>
+  <div>
+    <img src="/images/brier-score-plot.png" alt="Plot 3" style="max-width: 100%; height: auto;">
+    <p>Plot 3 description</p>
+  </div>
+</div>
+
+In U-trustworthiness, we develop a mathematical framework that evaluates the claim of whether “B is trustworthy to do X,” where B is a predictive classification model, and X is a subset of decision-making tasks. We show that for purpose of decision making where utility maximization is the primary goal, ‘properly-ranked’ models can be considered ‘trustworthy’ (See Theorem 2). We also show how AUC may be used as a measure of competence (See Theorem 5). 
+
+Now suppose the data scientist wishes to estimate the amount of loan to be given to an approved applicant. Here, the data scientist may also want to make sure that the model takes into account the income such that for approved applicants,  estimated loan amount is higher for applicants with higher income.  In this case, the goal is not ‘decision making’ anymore but to ‘infer’ from data. In such similar cases, where goal is to do ‘inference’, we show in I-trustworthiness that how local calibration is needed to ensure that model is ‘competent’ for doing inference.  We provide a statistically valid metric and a hypothesis test that can help a user evaluate if their model is locally calibrated with respect to some variables in their dataset. 
+<div>
+  <img src="/images/motivation_I-trustworthiness.pdf" alt="Plot 3" style="max-width: 100%; height: auto;">
+  <p>Plot 3 description</p>
+</div>
 </p>
 <hr />
 
