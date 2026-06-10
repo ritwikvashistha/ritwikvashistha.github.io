@@ -1,5 +1,6 @@
 ---
 title: "TAME Pain: Trustworthy AssessMEnt of Pain from Speech and Audio for the Empowerment of Patients"
+authors: "T. Q. Dao, E. Schneiders, J. Williams, J. R. Bautista, T. Seabrooke, G. Vigneswaran, R. Kolpekwar, R. Vashistha, A. Farahi"
 collection: publications
 category: datasets
 permalink: /publication/tame-pain-physionet

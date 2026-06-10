@@ -1,5 +1,6 @@
 ---
 title: "Investigating the Impact of Night Eating Disorder Upon Quality of Life Among University College Students, India"
+authors: "R. Jain, R. Vashistha, P. K. Sharma"
 collection: publications
 category: manuscripts
 permalink: /publication/night-eating

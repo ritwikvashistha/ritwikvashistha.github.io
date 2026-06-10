@@ -1,5 +1,6 @@
 ---
 title: "TAME Pain data release: using audio signals to characterize pain"
+authors: "T. Q. Dao, E. Schneiders, J. Williams, J. R. Bautista, T. Seabrooke, G. Vigneswaran, R. Kolpekwar, R. Vashistha, A. Farahi"
 collection: publications
 category: manuscripts
 permalink: /publication/tame-pain-data

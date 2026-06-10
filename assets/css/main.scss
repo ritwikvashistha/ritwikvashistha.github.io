@@ -269,6 +269,29 @@ body {
 }
 
 /* ─────────────────────────────────────────────────────────
+   Center content when no sidebar (use .no-sidebar class on body)
+   ───────────────────────────────────────────────────────── */
+
+.no-sidebar .archive,
+.no-sidebar .page {
+  float: none;
+  width: 100%;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
+@media screen and (max-width: 768px) {
+  .no-sidebar .archive,
+  .no-sidebar .page {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────
    Improved profile image styling
    ───────────────────────────────────────────────────────── */
 

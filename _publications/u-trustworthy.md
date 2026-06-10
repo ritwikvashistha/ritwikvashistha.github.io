@@ -1,12 +1,12 @@
 ---
-title: "U-trustworthy Models. Reliability, Competence, and Confidence in Decision-Making"
+title: "U-trustworthy Models: Reliability, Competence, and Confidence in Decision-Making"
+authors: "R. Vashistha, A. Farahi"
 collection: publications
 category: manuscripts
 permalink: /publication/u-trustworthy
-excerpt: 'This paper looks proposes a framework of trustworthiness of binary classification models for decision making'
+excerpt: 'This paper proposes a framework of trustworthiness of binary classification models for decision making'
 date: 2024-03-24
-venue: 'Proceedings of the AAAI Conference on Artificial Intelligence'
-slidesurl: ''
+venue: 'AAAI Conference on Artificial Intelligence'
 paperurl: 'https://ojs.aaai.org/index.php/AAAI/article/view/29972'
 ---
 ## Abstract

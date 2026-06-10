@@ -1,12 +1,13 @@
 ---
-title: "I-trustworthy Models. A framework for trustworthiness evaluation of probabilistic classifiers"
-authors: "Author A, Author B"
-venue: 'Proceedings of Machine Learning Research (AISTATS)'
-status: "manuscripts"
-paper_link: "https://arxiv.org/abs/2501.15617"
-layout: archive
+title: "I-trustworthy Models: A Framework for Trustworthiness Evaluation of Probabilistic Classifiers"
+authors: "R. Vashistha, A. Farahi"
+collection: publications
+category: manuscripts
 permalink: /publication/i-trustworthy
 excerpt: 'Evaluating trustworthiness of probabilistic classifiers using local calibration.'
+date: 2025-05-01
+venue: 'AISTATS (PMLR)'
+paperurl: 'https://arxiv.org/abs/2501.15617'
 ---
 
 ## Abstract

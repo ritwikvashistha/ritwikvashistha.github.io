@@ -37,12 +37,12 @@ $navicon-height             : 4px;
 $sidebar-link-max-width     : 250px;
 $sidebar-screen-min-width   : 1024px;
 
-/* Light theme (default) */
+/* Light theme (default) - soft off-white background */
 :root, [data-theme="light"] {
     --global-base-color                 : #{$gray};
-    --global-bg-color                   : #fff;
-    --global-border-color               : #{$lighter-gray};
-    --global-code-background-color      : #f6f8fa;
+    --global-bg-color                   : #fafaf8;
+    --global-border-color               : #e8e8e6;
+    --global-code-background-color      : #f0f0ee;
     --global-code-text-color            : #{$darker-gray};
     --global-fig-caption-color          : mix(#fff, #{$dark-gray}, 25%);
     --global-link-color                 : #{$accent};
@@ -50,9 +50,9 @@ $sidebar-screen-min-width   : 1024px;
     --global-link-color-visited         : #{$accent-light};
     --global-masthead-link-color        : #{$dark-gray};
     --global-masthead-link-color-hover  : #{$accent};
-    --global-text-color                 : #{$dark-gray};
+    --global-text-color                 : #333;
     --global-text-color-light           : #{$light-gray};
-    --global-thead-color                : #{$lighter-gray};
+    --global-thead-color                : #f0f0ee;
     --global-accent-color               : #{$accent};
 }
 

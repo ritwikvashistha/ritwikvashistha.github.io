@@ -1,12 +1,12 @@
 ---
 title: "Effect Heterogeneity with Earth Observation in Randomized Controlled Trials: Exploring the Role of Data, Model, and Evaluation Metric Choice"
+authors: "C. T. Jerzak, R. Vashistha, A. Daoud"
 collection: publications
 category: preprints
 permalink: /publication/effect-heterogeneity
 excerpt: 'This paper looks at how different modelling choices affect treatment effect heterogeneity for earth observation data'
 date: 2024-07-16
-venue: 'arXiv'
-status: 'arxiv'
+venue: 'arXiv preprint'
 paperurl: 'https://arxiv.org/abs/2407.11674'
 ---
 

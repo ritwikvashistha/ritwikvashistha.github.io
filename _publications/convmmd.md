@@ -1,5 +1,6 @@
 ---
 title: "Convolutional Maximum Mean Discrepancy for Inference in Noisy Data"
+authors: "R. Vashistha, J. M. Phillips, A. Sarkar, A. Farahi"
 collection: publications
 category: preprints
 permalink: /publication/convmmd

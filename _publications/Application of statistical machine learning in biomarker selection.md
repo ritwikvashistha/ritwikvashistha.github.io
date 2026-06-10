@@ -1,11 +1,12 @@
 ---
 title: "Application of statistical machine learning in biomarker selection"
+authors: "R. Vashistha, Z. Noor, S. Dasgupta, J. Pu, S. Deng"
 collection: publications
 category: manuscripts
 permalink: /publication/biomarker-selection
 excerpt: 'This paper is about doing biomarker selection in JAVELIN Bladder 100 phase 3 trial data'
 date: 2023-10-26
-venue: 'Nature Scientific Reports'
+venue: 'Scientific Reports'
 paperurl: 'https://www.nature.com/articles/s41598-023-45323-9'
 ---
 ## Abstract
