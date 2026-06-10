@@ -1,0 +1,26 @@
+# News items — most recent first
+# Fields:
+#   date:      Display string, e.g. "June 2026" or "Summer 2026"
+#   text:      Supports markdown (links, bold, etc.)
+#   highlight: true → renders in bold, use for big announcements
+
+- date: "June 2026"
+  text: "I am on the **job market** for positions beginning Summer 2027. Please [get in touch](mailto:ritwik.v@utexas.edu) if you'd like to discuss opportunities."
+  highlight: true
+
+- date: "March 2026"
+  text: "Awarded [Outstanding Graduate Research Fellowship](https://gradschool.utexas.edu/funding/fellowships/grad-school/continuing), covering funding for academic year 2026-2027. "
+  highlight: true 
+
+- date: "Feb 2026"
+  text: "New paper on measurement error out on [arXiv](https://arxiv.org/abs/2604.12022)."
+
+- date: "May 2025"
+  text: "Presented work on trustworthy ML at [AISTATS 2025](../publications/i-trustworthy)."
+
+- date: "May 2025"
+  text: "Won [Keller Award](https://stat.utexas.edu/about-us/graduate-student-awards) for demonstrating exceptional leadership skills and supporting others during PhD."
+  highlight: true 
+
+- date: "Aug 2024"
+  text: "Started third year as a member of the [CosmicAI Institute](https://cosmicai.github.io)."

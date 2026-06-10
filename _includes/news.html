@@ -1,0 +1,19 @@
+{% if site.data.news %}
+<section class="news-section">
+  <h2>News</h2>
+  <ul class="news-list">
+    {% for item in site.data.news limit: 6 %}
+    <li {% if item.highlight %}class="highlight"{% endif %}>
+      <span class="news-date">{{ item.date }}</span>
+      <span class="news-text">{{ item.text | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+
+  {% if site.data.news.size > 6 %}
+  <p class="news-show-more">
+    <a href="#" onclick="document.querySelector('.news-list').classList.toggle('show-all'); this.textContent = this.textContent === 'Show more' ? 'Show less' : 'Show more'; return false;">Show more</a>
+  </p>
+  {% endif %}
+</section>
+{% endif %}

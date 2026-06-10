@@ -83,3 +83,91 @@ $x-large:   90vw;
 //     font-size: 0.85em;
 //   }
 // }
+
+/* ─────────────────────────────────────────────────────────
+   News section
+   Add this to assets/css/main.scss, after the @import lines
+   ───────────────────────────────────────────────────────── */
+
+.news-section {
+  margin: 2em 0 2.5em;
+
+  h2 {
+    margin-bottom: 0.6em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #e0e0e0;
+  }
+}
+
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  /* When show-all is NOT toggled, hide items beyond the 6th */
+  &:not(.show-all) li:nth-child(n+7) {
+    display: none;
+  }
+
+  li {
+    display: flex;
+    gap: 1.25em;
+    padding: 0.55em 0;
+    border-bottom: 1px solid #f2f2f2;
+    align-items: baseline;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    /* Highlighted item (e.g. job market announcement) */
+    &.highlight .news-text {
+      font-weight: 500;
+    }
+  }
+}
+
+.news-date {
+  font-size: 0.82em;
+  color: #888;
+  min-width: 95px;
+  flex-shrink: 0;
+  padding-top: 1px;
+  font-variant-numeric: tabular-nums;
+}
+
+.news-text {
+  font-size: 0.9em;
+  line-height: 1.55;
+
+  a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+}
+
+.news-show-more {
+  margin-top: 0.6em;
+  font-size: 0.85em;
+
+  a {
+    color: #888;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Mobile: stack date above text on very narrow screens */
+@media (max-width: 480px) {
+  .news-list li {
+    flex-direction: column;
+    gap: 0.2em;
+  }
+
+  .news-date {
+    min-width: unset;
+  }
+}
