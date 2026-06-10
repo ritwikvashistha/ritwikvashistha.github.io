@@ -1,5 +1,5 @@
 /* ==========================================================================
-   DEFAULT THEME
+   DEFAULT THEME (with light/dark mode support)
    ========================================================================== */
 
 /* Color codes used for the theme */
@@ -8,6 +8,17 @@ $dark-gray                  : mix(#000, $gray, 40%);
 $darker-gray                : mix(#000, $gray, 60%);
 $light-gray                 : mix(#fff, $gray, 50%);
 $lighter-gray               : mix(#fff, $gray, 90%);
+
+/* Accent color - muted teal for a professional academic look */
+$accent                     : #0d7377;
+$accent-dark                : mix(#000, $accent, 15%);
+$accent-light               : mix(#fff, $accent, 15%);
+
+/* Dark mode colors */
+$bg-dark                    : #1a1a2e;
+$bg-dark-secondary          : #25253d;
+$text-dark                  : #e8e8e8;
+$text-dark-muted            : #a0a0a0;
 
 /* Color codes used for the site */
 $danger-color               : #ee5f5b;
@@ -26,20 +37,40 @@ $navicon-height             : 4px;
 $sidebar-link-max-width     : 250px;
 $sidebar-screen-min-width   : 1024px;
 
-/* Default light theme for the site */
-:root {
+/* Light theme (default) */
+:root, [data-theme="light"] {
     --global-base-color                 : #{$gray};
     --global-bg-color                   : #fff;
     --global-border-color               : #{$lighter-gray};
-    --global-code-background-color      : #fafafa;
+    --global-code-background-color      : #f6f8fa;
     --global-code-text-color            : #{$darker-gray};
-    --global-fig-caption-color          : mix(#fff,  #{$dark-gray}, 25%);
-    --global-link-color                 : #2f7f93;
-    --global-link-color-hover           : mix(#000, #2f7f93, 25%);
-    --global-link-color-visited         : mix(#fff, #2f7f93, 25%);  
+    --global-fig-caption-color          : mix(#fff, #{$dark-gray}, 25%);
+    --global-link-color                 : #{$accent};
+    --global-link-color-hover           : #{$accent-dark};
+    --global-link-color-visited         : #{$accent-light};
     --global-masthead-link-color        : #{$dark-gray};
-    --global-masthead-link-color-hover  : mix(#000, #{$gray}, 25%);    
+    --global-masthead-link-color-hover  : #{$accent};
     --global-text-color                 : #{$dark-gray};
     --global-text-color-light           : #{$light-gray};
     --global-thead-color                : #{$lighter-gray};
+    --global-accent-color               : #{$accent};
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+    --global-base-color                 : #{$bg-dark};
+    --global-bg-color                   : #{$bg-dark};
+    --global-border-color               : #{$bg-dark-secondary};
+    --global-code-background-color      : #{$bg-dark-secondary};
+    --global-code-text-color            : #{$text-dark};
+    --global-fig-caption-color          : #{$text-dark-muted};
+    --global-link-color                 : #14b8b8;
+    --global-link-color-hover           : #1dd3d3;
+    --global-link-color-visited         : #0f9b9b;
+    --global-masthead-link-color        : #{$text-dark};
+    --global-masthead-link-color-hover  : #14b8b8;
+    --global-text-color                 : #{$text-dark};
+    --global-text-color-light           : #{$text-dark-muted};
+    --global-thead-color                : #{$bg-dark-secondary};
+    --global-accent-color               : #14b8b8;
 }

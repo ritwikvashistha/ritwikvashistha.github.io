@@ -1,3 +1,25 @@
 <script src="{{ base_path }}/assets/js/main.min.js"></script>
 
+<!-- Theme toggle handler -->
+<script>
+(function() {
+  var toggle = document.getElementById('theme-toggle');
+  if (!toggle) return;
+
+  toggle.addEventListener('click', function() {
+    var currentTheme = document.documentElement.getAttribute('data-theme');
+    var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+
+  // Listen for system theme changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+    if (!localStorage.getItem('theme')) {
+      document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+    }
+  });
+})();
+</script>
+
 {% include analytics.html %}
