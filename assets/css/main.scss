@@ -7,6 +7,8 @@
  * Note that the files are processed in the order they are imported, so they are partly
    sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
  */
+$max-width: 90vw;
+$x-large:   90vw;
 
 @import 
     "vendor/breakpoint/breakpoint",
@@ -39,3 +41,45 @@
     "vendor/font-awesome/brands",
     "vendor/magnific-popup/magnific-popup"
 ;
+
+// /* ─── Responsive image fix ─────────────────────────────────────────── */
+// /* Prevents all images from overflowing their container on any screen   */
+// img {
+//   max-width: 100%;
+//   height: auto;
+// }
+
+// /* ─── Research page figures ─────────────────────────────────────────── */
+// /* Adds breathing room and centers figures on narrow screens             */
+// .page__content figure {
+//   margin: 1.5em 0;
+//   text-align: center;
+// }
+
+// .page__content figure img {
+//   max-width: 100%;
+//   height: auto;
+// }
+
+// /* ─── Sidebar stacks cleanly on mobile ──────────────────────────────── */
+// @media (max-width: 768px) {
+//   .sidebar {
+//     text-align: center;
+//   }
+
+//   .sidebar .author__avatar img {
+//     max-width: 120px;
+//     margin: 0 auto;
+//   }
+
+//   .sidebar .author__urls-wrapper {
+//     display: block;
+//   }
+// }
+
+// /* ─── Prevent navigation overflow on small screens ──────────────────── */
+// @media (max-width: 600px) {
+//   .masthead__menu-item {
+//     font-size: 0.85em;
+//   }
+// }
