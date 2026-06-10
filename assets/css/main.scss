@@ -267,3 +267,63 @@ body {
     color: var(--global-link-color-hover);
   }
 }
+
+/* ─────────────────────────────────────────────────────────
+   Improved profile image styling
+   ───────────────────────────────────────────────────────── */
+
+/* Desktop: larger rectangular image filling sidebar width */
+@media screen and (min-width: 1024px) {
+  .author__avatar {
+    margin-bottom: 1em;
+
+    img {
+      max-width: 100%;
+      width: 100%;
+      border-radius: 8px;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+  }
+}
+
+/* Mobile: larger image with better layout */
+@media screen and (max-width: 1023px) {
+  .sidebar > div[itemscope] {
+    display: grid;
+    grid-template-columns: 100px 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 0 15px;
+    align-items: start;
+  }
+
+  .author__avatar {
+    grid-row: 1 / 3;
+    width: 100px;
+    display: block;
+
+    img {
+      width: 100%;
+      max-width: 100px;
+      border-radius: 8px;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+  }
+
+  .author__content {
+    display: block;
+    grid-column: 2;
+    grid-row: 1;
+    padding-left: 0;
+    padding-right: 0;
+    align-self: center;
+  }
+
+  .author__urls-wrapper {
+    grid-column: 3;
+    grid-row: 1;
+    display: block;
+    align-self: center;
+  }
+}
