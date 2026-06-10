@@ -12,4 +12,7 @@ Hi, I am a final year PhD candidate in Statistics at University of Texas at Aust
 
 If you'd like to know more about me, I also have a [personal website](https://www.ritwikvashistha.com/). It is more of a creative outlet, where I share my experiences and post some photos I took while travelling! 
 
+
 {% include news.html %}
+
+{% include selected_publications.html %}

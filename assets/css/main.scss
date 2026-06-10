@@ -85,6 +85,72 @@ $x-large:   90vw;
 // }
 
 /* ─────────────────────────────────────────────────────────
+   Selected Publications section
+   ───────────────────────────────────────────────────────── */
+
+.selected-publications {
+  margin: 2em 0 2.5em;
+
+  h2 {
+    margin-bottom: 0.8em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid var(--global-border-color);
+  }
+}
+
+.selected-pub {
+  margin-bottom: 1.2em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid var(--global-border-color);
+
+  &:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0.5em;
+  }
+}
+
+.selected-pub-title {
+  font-weight: 600;
+  margin-bottom: 0.2em;
+  font-size: 1em;
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.selected-pub-authors {
+  color: var(--global-text-color-light);
+  font-size: 0.9em;
+  margin: 0.15em 0;
+}
+
+.selected-pub-venue {
+  font-style: italic;
+  font-size: 0.85em;
+  margin: 0.15em 0;
+  color: var(--global-text-color-light);
+}
+
+.selected-pub-more {
+  margin-top: 0.8em;
+  font-size: 0.9em;
+
+  a {
+    color: var(--global-link-color);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* ─────────────────────────────────────────────────────────
    News section
    Add this to assets/css/main.scss, after the @import lines
    ───────────────────────────────────────────────────────── */
