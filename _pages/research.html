@@ -10,37 +10,85 @@ author_profile: false
 <!-- Introduction Section -->
 <h2>About My Research</h2>
 <p>
-My current research focus is on building trustworthy, causal and robust stats/ML models for decision making and inference. A lot of fancy terms but the overarching goal is to build nice reliable statistical models that give good insights.
-<h3>Trustworthy:</h3>
-‘Trustworthiness’ is a broad term that has various facets and can be subjective in practice. In order to study trustworthiness in context of machine learning, I have focused on competence based theories of trust. Here, trust is framed as reliance on a machine or model’s capability to achieve its goals. 
-
-In the context of predictive models and decision-making, this notion translates into our reliance on a model that consistently demonstrates competence in achieving its goal in a decision-making task.  Suppose, a data scientist is interested in using classification models for making some decisions (eg. to give loan or not) and wishes to understand which model (Logistic Regression, XGboost, Neural Networks etc) can be considered ‘trustworthy’. There are multiple choices and often different metrics pick different models.  
-<!-- Plots Section -->
-<div>
-  <img src="/images/figure1-utrustworthy.png" alt="Plot 3" style="max-width: 100%; height: auto;">
-  <p>Figure 1 from <a href=https://ritwikvashistha.github.io/publication/u-trustworthy> U-Trustworthy Paper</a>
-</div>
+During my PhD, I have focused on the problem of doing reliable or trustworthy inference with machine learning models under imperfect conditions. In particular, I have developed methods that can produce valid scientific conclusions when data is noisy or when models may be miscalibrated. This research is motivated by real-world applications in astronomy and other scientific fields where data is usually measured with some error or noise.
 </p>
 <p>
-In U-trustworthiness, we develop a mathematical framework that evaluates the claim of whether “B is trustworthy to do X,” where B is a predictive classification model, and X is a subset of decision-making tasks. We show that for purpose of decision making where utility maximization is the primary goal, ‘properly-ranked’ models can be considered ‘trustworthy’ (See Theorem 2). We also show how AUC may be used as a measure of competence (See Theorem 5). 
+Real-world data is rarely clean and free of biases. In astronomy, every observation recorded by a telescope comes with known uncertainty (noise) and every astronomical survey dataset reflects not the full population but the objects that were bright enough, close enough, or otherwise detectable — introducing selection effects that can corrupt naive inferences in subtle but consequential ways.
 </p>
 
-<p>
-Now suppose the data scientist wishes to estimate the amount of loan to be given to an approved applicant. Here, the data scientist may also want to make sure that the model takes into account the income such that for approved applicants,  estimated loan amount is higher for applicants with higher income.  In this case, the goal is not ‘decision making’ anymore but to ‘infer’ from data. In such similar cases, where goal is to do ‘inference’, we show in I-trustworthiness that how local calibration is needed to ensure that model is ‘competent’ for doing inference.  We provide a statistically valid metric and a hypothesis test that can help a user evaluate if their model is locally calibrated with respect to some variables in their dataset. 
-<div>
-  <img src="/images/motivation_I-trustworthiness.png" alt="Plot 3" style="max-width: 100%; height: auto;">
-  <p>Figure 1 from <a href=https://ritwikvashistha.github.io/publication/i-trustworthy> I-Trustworthy Paper</a>. Consider the task of inferring the average age of homeowners when homeownership status is unknown (test sample), using two models that assign probabilities of homeownership. While Model 1 (blue model) outperforms Model 2 in terms of accuracy, Brier score, and ECE, only Model 2 provides an unbiased estimate of the inference target (right panel). The histograms are based on 200 realizations of test/train samples. } </p>
-</div>
-</p>
-<p>
-<h3>Causal:</h3>
-More on causal part soon!!
-</p>
-<p>
-<h3>Robust:</h3>
-More on  robust part soon!!
-</p>
 <hr/>
 
+<h2>Noisy Data and Statistical Inference under Measurement Error</h2>
+<p>
+The goal here is to understand relationships in data given that the data is only measured imperfectly. This problem of inference under measurement error appears across science under several names. <em>Errors-in-variables regression</em> arises when you want to regress an outcome on a predictor, but can only observe the predictor with noise. <em>Deconvolution</em> arises when you observe a noise-corrupted distribution and want to recover the original. <em>Denoising</em> arises when you want to clean individual corrupted observations. These have historically been treated as separate problems. My work shows they share a common mathematical structure and exploits that structure to solve all three within a single unified framework.
+</p>
 
+<p>
+The framework is built on Maximum Mean Discrepancy (MMD), a kernel-based measure of distance between probability distributions in a reproducing kernel Hilbert space (projecting distributions to a higher-dimensional mathematical space for easy comparison). The key insight is that each of the three problems can be recast as a task of matching observed distributions to their noise-free counterparts in a space where that matching is tractable. A single family of estimators handles all three settings, and I establish theoretical guarantees such as consistency and convergence rates that hold across the full framework.
+</p>
+
+<div style="text-align: center; margin: 2em 0;">
+  <img src="/images/convmmd-framework.png" alt="convMMD Framework" style="max-width: 80%; height: auto;">
+  <p style="font-size: 0.9em; color: #666;"><em>Conceptual overview of the convMMD framework: noisy observations are projected to a feature space where MMD-based matching enables recovery of the latent distribution.</em></p>
+</div>
+
+<h3>Application: Galaxy Cluster Scaling Relations</h3>
+<p>
+I demonstrate the use of this framework on galaxy cluster data from the Dark Energy Survey (DES) in my <a href="/publication/convmmd">first paper</a> on this problem. I examine the scaling relation between two key cluster mass proxies: optical richness (λ<sub>RM</sub>) and hot gas temperature (T<sub>X</sub>). Here, both variables are subject to measurement error, presenting an errors-in-variables regression problem. Astrophysical scaling relations are commonly modeled as power laws, which become linear after taking logarithms.
+</p>
+
+<div style="text-align: center; margin: 2em 0;">
+  <img src="/images/xmm-regression-results.png" alt="XMM Regression Results" style="max-width: 100%; height: auto;">
+  <p style="font-size: 0.9em; color: #666;"><em>Left: Simulation results comparing convMMD to other methods (MSE-loss, SIMEX, Bayesian). Right: Real XMM data showing temperature-richness scaling relation. Our method faithfully captures the underlying relationship.</em></p>
+</div>
+
+<h3>Scalability: Image Denoising</h3>
+<p>
+One advantage of the proposed method is its scalability to higher dimensions. This is illustrated using an experiment where I apply the framework to denoise MNIST images corrupted by different noise types, as detailed in my paper on <a href="/publication/nonparametric-deconvolution">Nonparametric Deconvolution and Denoising</a>.
+</p>
+
+<div style="text-align: center; margin: 2em 0;">
+  <img src="/images/mnist-denoising-results.png" alt="MNIST Denoising Results" style="max-width: 100%; height: auto;">
+  <p style="font-size: 0.9em; color: #666;"><em>MNIST denoising results comparing convMMD-based methods to alternatives (Noise2Self, SURE, BUIFD) across different noise types (AWGN, AR1 with varying correlations). SSIM plots show performance across noise levels.</em></p>
+</div>
+
+<p>
+This line of work is the center of my current research program. Related papers include:
+</p>
+<ul>
+  <li><a href="/publication/convmmd">Convolutional Maximum Mean Discrepancy for Inference in Noisy Data</a> — the theoretical framework</li>
+  <li><a href="/publication/nonparametric-deconvolution">Nonparametric Deconvolution and Denoising using Simulation Based Inference</a> — extension to nonparametric settings</li>
+  <li><a href="/publication/oasis">OASIS: Observation-Aware Simulation-Based Inference via Distributional Matching</a> — handling selection biases and survey distortions</li>
+</ul>
+
+<hr/>
+
+<h2>Model Trustworthiness and Calibration</h2>
+<p>
+The work above addresses inference when the data itself is corrupted. But even with clean data, the models we fit can introduce their own errors — producing predictions that are overconfident, miscalibrated, or unreliable for downstream decision-making. My second line of research focuses on understanding when we can trust a model's outputs.
+</p>
+
+<p>
+To answer this rigorously, I draw on competence-based theories of trust from philosophy, where trust is framed as reliance on a model's capability to achieve specific goals. This framing lets us ask precise questions: is this model competent for <em>this particular task</em>? Suppose a data scientist is choosing between classification models for loan decisions (Logistic Regression, XGBoost, Neural Networks, etc.) and wants to know which one is 'trustworthy'. Different metrics often pick different models.
+</p>
+
+<div style="text-align: center; margin: 2em 0;">
+  <img src="/images/figure1-utrustworthy.png" alt="U-Trustworthy Figure 1" style="max-width: 100%; height: auto;">
+  <p style="font-size: 0.9em; color: #666;"><em>Figure 1 from <a href="/publication/u-trustworthy">U-Trustworthy Paper</a></em></p>
+</div>
+
+<p>
+In <a href="/publication/u-trustworthy">U-trustworthiness</a>, we develop a mathematical framework that evaluates the claim of whether "B is trustworthy to do X," where B is a predictive classification model, and X is a subset of decision-making tasks. We show that for the purpose of decision making where utility maximization is the primary goal, 'properly-ranked' models can be considered 'trustworthy' (see Theorem 2). We also show how AUC may be used as a measure of competence (see Theorem 5).
+</p>
+
+<p>
+Now suppose the data scientist wishes to estimate the amount of loan to be given to an approved applicant. Here, the data scientist may also want to make sure that the model takes into account the income such that for approved applicants, the estimated loan amount is higher for applicants with higher income. In this case, the goal is not 'decision making' anymore but to 'infer' from data. In such cases where the goal is to do 'inference', we show in <a href="/publication/i-trustworthy">I-trustworthiness</a> how local calibration is needed to ensure that a model is 'competent' for doing inference. We provide a statistically valid metric and a hypothesis test that can help a user evaluate if their model is locally calibrated with respect to some variables in their dataset.
+</p>
+
+<div style="text-align: center; margin: 2em 0;">
+  <img src="/images/motivation_I-trustworthiness.png" alt="I-Trustworthy Motivation" style="max-width: 100%; height: auto;">
+  <p style="font-size: 0.9em; color: #666;"><em>Figure 1 from <a href="/publication/i-trustworthy">I-Trustworthy Paper</a>. Consider the task of inferring the average age of homeowners when homeownership status is unknown (test sample), using two models that assign probabilities of homeownership. While Model 1 (blue) outperforms Model 2 in terms of accuracy, Brier score, and ECE, only Model 2 provides an unbiased estimate of the inference target (right panel). The histograms are based on 200 realizations of test/train samples.</em></p>
+</div>
+
+<hr/>
 

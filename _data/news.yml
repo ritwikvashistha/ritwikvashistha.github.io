@@ -8,6 +8,9 @@
   text: "I am on the **job market** for positions beginning Summer 2027. Please [get in touch](mailto:ritwik.v@utexas.edu) if you'd like to discuss opportunities."
   highlight: true
 
+- date: "June 2026"
+  text: "Two new preprints on simulation-based inference: [OASIS](https://arxiv.org/abs/2606.22572) on observation-aware inference with selection biases, and [Nonparametric Deconvolution](https://arxiv.org/abs/2606.21907) on density deconvolution and denoising."
+
 - date: "May 2026"
   text: "Won International Society of Bayesian Analysis Travel Award for presenting research at [ISBA 2026](https://isba2026.github.io/)"
   highlight: true  
