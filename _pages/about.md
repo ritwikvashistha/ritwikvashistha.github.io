@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Hi, I am a final year PhD candidate in Statistics at University of Texas at Austin. I am currently doing research broadly related to building robust and reliable machine learning models for decison making. To learn more about my research, please check out [Research](https://ritwikvashistha.github.io/research/) where i give a brief overview. To check out the projects, see [Publications](https://ritwikvashistha.github.io/publications/) . I hope to talk about my projects in more detail later in blog posts and share the slides as well. At UT, I am a member of the [CosmicAI Institute](https://www.cosmicai.org/team), where I am advised by [Dr. Arya Farahi](https://stat.utexas.edu/directory/arya-farahi). 
+Hi, I am a final year PhD candidate in Statistics at University of Texas at Austin. My research focuses on reliable statistical inference under imperfect conditions, in particular when data is noisy or when models may be miscalibrated. To learn more about my research, please check out [Research](https://ritwikvashistha.github.io/research/) where i give a brief overview. To check out the projects, see [Publications](https://ritwikvashistha.github.io/publications/) . I hope to talk about my projects in more detail later in blog posts and share the slides as well. At UT, I am a member of the [CosmicAI Institute](https://www.cosmicai.org/team), where I am advised by [Dr. Arya Farahi](https://stat.utexas.edu/directory/arya-farahi). 
 
 
 If you'd like to know more about me, I also have a [personal website](https://www.ritwikvashistha.com/). It is more of a creative outlet, where I share my experiences and post some photos I took while travelling! 
