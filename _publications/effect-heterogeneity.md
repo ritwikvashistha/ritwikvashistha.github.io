@@ -8,6 +8,18 @@ excerpt: 'This paper looks at how different modelling choices affect treatment e
 date: 2024-07-16
 venue: 'arXiv preprint'
 paperurl: 'https://arxiv.org/abs/2407.11674'
+arxiv: '2407.11674'
+keywords:
+  - causal inference
+  - satellite imagery
+  - randomized controlled trials
+  - treatment effect heterogeneity
+  - CATE
+  - conditional average treatment effect
+  - earth observation
+  - remote sensing
+  - machine learning causal inference
+  - heterogeneous treatment effects
 ---
 
 ## Abstract

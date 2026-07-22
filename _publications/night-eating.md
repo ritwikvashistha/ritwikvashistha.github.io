@@ -8,6 +8,15 @@ excerpt: 'A study investigating the prevalence of night eating syndrome and its 
 date: 2025-12-01
 venue: 'Indian Journal of Community Medicine'
 paperurl: 'https://journals.lww.com/ijcm/fulltext/2025/12003/investigating_the_impact_of_night_eating_disorder.22.aspx'
+keywords:
+  - night eating syndrome
+  - eating disorders
+  - quality of life
+  - mental health
+  - university students
+  - sleep disturbance
+  - morning anorexia
+  - health survey
 ---
 ## Abstract
 This study investigated the prevalence of eating disorders and explored associations between these outcomes with body mass index (BMI), insomnia, and health-related quality of life (HRQoL) among Delhi University students. We administered a night eating questionnaire (NEQ) along with subscales on morning anorexia, delayed morning meal, evening hyperphagia, sleep disturbance, and the Form-36 health quality survey to 524 students (284 females and 240 males). The prevalence of night eating syndrome (NES) in the population was found to be 33%, of which 48% were females. Results showed that people suffering from morning anorexia and night awakening have much lower mental health composite scores (MCS) and physical health composite scores (PCS).

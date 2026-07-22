@@ -8,6 +8,18 @@ excerpt: 'Evaluating trustworthiness of probabilistic classifiers using local ca
 date: 2025-05-01
 venue: 'AISTATS (PMLR)'
 paperurl: 'https://arxiv.org/abs/2501.15617'
+arxiv: '2501.15617'
+keywords:
+  - model calibration
+  - local calibration
+  - trustworthy machine learning
+  - probabilistic classifiers
+  - calibration error
+  - machine learning trustworthiness
+  - kernel calibration test
+  - model reliability
+  - inference with ML models
+  - calibration diagnostics
 ---
 
 ## Abstract

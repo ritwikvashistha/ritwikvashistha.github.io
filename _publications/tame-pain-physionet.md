@@ -8,6 +8,17 @@ excerpt: 'A PhysioNet dataset containing over 7,000 utterances from 51 participa
 date: 2025-01-21
 venue: 'PhysioNet'
 paperurl: 'https://physionet.org/content/tame-pain/1.0.0/'
+keywords:
+  - pain assessment dataset
+  - speech analysis
+  - PhysioNet
+  - pain detection from voice
+  - audio dataset
+  - cold pressor task
+  - vocal pain markers
+  - machine learning dataset
+  - pain research
+  - speech corpus
 ---
 ## Abstract
 The TAME Pain dataset provides a comprehensive collection for studying the relationship between induced acute pain and speech in adults. The dataset consists of audio recordings, audio metadata, participant data, and detailed annotations. We recorded over 7,000 utterances from 51 participants using the Cold Pressor Task (CPT) method to induce pain, correlating their self-reported pain levels with vocal cues. This dataset includes comprehensive annotations detailing background noise, speech errors, and non-speech vocal features.

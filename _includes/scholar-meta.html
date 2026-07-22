@@ -1,0 +1,44 @@
+{% comment %}
+Highwire Press meta tags for Google Scholar indexing.
+Include this in head.html for publication pages.
+{% endcomment %}
+
+{% if page.collection == 'publications' %}
+<meta name="citation_title" content="{{ page.title | strip_html | escape }}">
+{% assign author_list = page.authors | split: ", " %}
+{% for author in author_list %}
+<meta name="citation_author" content="{{ author | strip }}">
+{% endfor %}
+<meta name="citation_publication_date" content="{{ page.date | date: '%Y/%m/%d' }}">
+{% if page.venue %}
+<meta name="citation_journal_title" content="{{ page.venue | strip_html | escape }}">
+{% endif %}
+{% if page.paperurl %}
+<meta name="citation_pdf_url" content="{{ page.paperurl }}">
+{% endif %}
+<meta name="citation_abstract_html_url" content="{{ site.url }}{{ page.url }}">
+{% if page.doi %}
+<meta name="citation_doi" content="{{ page.doi }}">
+{% endif %}
+{% if page.arxiv %}
+<meta name="citation_arxiv_id" content="{{ page.arxiv }}">
+{% endif %}
+
+{% comment %} Dublin Core metadata for broader academic indexing {% endcomment %}
+<meta name="DC.title" content="{{ page.title | strip_html | escape }}">
+{% for author in author_list %}
+<meta name="DC.creator" content="{{ author | strip }}">
+{% endfor %}
+<meta name="DC.date" content="{{ page.date | date: '%Y-%m-%d' }}">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+{% if page.excerpt %}
+<meta name="DC.description" content="{{ page.excerpt | strip_html | escape }}">
+{% endif %}
+
+{% comment %} Keywords meta tag {% endcomment %}
+{% if page.keywords %}
+<meta name="keywords" content="{{ page.keywords | join: ', ' }}">
+<meta name="citation_keywords" content="{{ page.keywords | join: '; ' }}">
+{% endif %}
+{% endif %}
