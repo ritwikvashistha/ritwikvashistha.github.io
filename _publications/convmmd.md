@@ -23,15 +23,15 @@ keywords:
 ---
 *A short, plain-language walkthrough of the paper. For the formal statements, see the [abstract](#paper-abstract) and the [full paper](https://arxiv.org/abs/2604.12022).*
 
-## The problem: inference when your data is noisy
+## The problem
 
-Measurement error is a ubiquitous challenge in modern statistics, complicating data analysis across fields as diverse as biology, economics, epidemiology, and astronomy. In many of these settings the noise law is actually *known* — quantified through calibration, replication, or physical modeling — yet standard tools offer limited guidance on how to fold that knowledge into formal inference. Ignoring measurement noise is not harmless: it leads to biased estimation, inflated variance, and a loss of inferential power that can undermine scientific conclusions.
+Measurement error is a ubiquitous challenge in modern statistics because it makes data analysis complicated. Datasets across fields as diverse as biology, economics, epidemiology, and astronomy haven been to be corrupted with noise or measurement error. In many of these settings the noise process or law is *known* — quantified through calibration, replication, or physical modeling — yet standard tools or models offer limited guidance on how to incorporate that information into formal inference. Ignoring measurement noise is not harmless because it can lead to biased estimation, inflated variance, and a loss of inferential power that can undermine scientific conclusions.
 
-Kernel methods based on **Maximum Mean Discrepancy (MMD)** — which measures the distance between two distributions through their embeddings in a reproducing kernel Hilbert space (RKHS) — have become a popular tool for likelihood-free testing and estimation. But almost all existing MMD methods assume clean, noise-free observations, a premise that is increasingly untenable for modern datasets. This paper closes that gap.
+Kernel methods based on **Maximum Mean Discrepancy (MMD)** — which measures the distance between two distributions through their embeddings in a reproducing kernel Hilbert space (RKHS) — have become a popular tool for likelihood-free testing and estimation. But almost all existing MMD methods assume clean, noise-free observations, an assumption that may not be true for many scientific datasets. This paper closes that gap.
 
-## The key idea: put the noise inside the distance
+## The key idea
 
-Rather than treating noise as an ancillary correction, we incorporate it directly into the definition of statistical distance. Given a known noise law \\(m\\), we compare two distributions \\(p\\) and \\(q\\) *only after both have been convolved with the noise* — a quantity we call the **convolutional MMD (convMMD)**:
+Instead of trying to correct for noise first and then do inference, we incorporate the noise directly into the definition of our statistical model. Given a known noise law \\(m\\), we compare two distributions \\(p\\) and \\(q\\) *only after both have been convolved with the noise* — a quantity we call the **convolutional MMD (convMMD)**:
 
 $$\text{convMMD}(p, q, m) = \text{MMD}(p * m,\; q * m).$$
 
@@ -40,15 +40,11 @@ Two results make this practical:
 - **It remains a valid metric.** Under standard kernel conditions, \\(\text{convMMD}(p,q,m) = 0\\) if and only if \\(p = q\\), so noisy samples can still uniquely identify the underlying distributions.
 - **Noise simply widens the kernel.** For translation-invariant kernels, computing convMMD on noisy data is mathematically equivalent to computing ordinary MMD on the *clean* data with a smoother, wider-bandwidth kernel. In effect, the noise is absorbed into the kernel.
 
-A direct consequence is a finite-sample deviation bound that is **governed by the sample size, not the noise magnitude** — the bound is unchanged by the presence of measurement error.
+To estimate the parameters \\(\theta\\) of a model from noisy observations, we minimize the convMMD between the observed data and data simulated from the model (convolved with the same noise). This is a likelihood-free, simulation-based objective that avoids intractable integrals and is optimized efficiently with stochastic gradient descent. One of the main advantages of this idea is that it allows us to estimate the parameters directly without going through a two-step process: denoising data and then estimating parameters. 
 
-## Estimation that stays efficient under noise
+The resulting estimator is **consistent and asymptotically normal**, and perhaps counterintuitively it retains the parametric \\(\sqrt{N}\\) convergence rate *despite* the measurement error. Noise does not degrade the rate; it only inflates the asymptotic variance by an explicitly characterized amount. The estimator also inherits MMD's robustness to outliers.
 
-To estimate the parameters \\(\theta\\) of a model from noisy observations, we minimize the convMMD between the observed data and data simulated from the model (convolved with the same noise). This is a likelihood-free, simulation-based objective that avoids intractable integrals and is optimized efficiently with stochastic gradient descent.
-
-The resulting estimator is **consistent and asymptotically normal**, and — perhaps counterintuitively — it retains the parametric \\(\sqrt{N}\\) convergence rate *despite* the measurement error. Noise does not degrade the rate; it only inflates the asymptotic variance by an explicitly characterized amount. The estimator also inherits MMD's robustness to outliers.
-
-## Recovering the truth under different noise
+## Illustration 
 
 <div style="text-align: center; margin: 2em 0;">
   <img src="/images/convmmd-density-deconvolution.png" alt="convMMD density deconvolution under Gaussian, Laplace, and Student's t noise" style="max-width: 100%; height: auto;">
@@ -57,7 +53,7 @@ The resulting estimator is **consistent and asymptotically normal**, and — per
 
 On a three-component Gaussian mixture, convMMD recovers the latent density from noisy samples. When the noise is Gaussian, it matches the specialized Bayesian method (XDGMM). But when the noise is heavy-tailed — Laplace or Student's t — the Gaussian-based methods degrade, since the Gaussian likelihood assigns small probability to outliers, while the convMMD estimator remains stable. This flexibility is the payoff of not baking a Gaussian assumption into the estimator.
 
-## A real scaling relation from astronomy
+## Real Data Example
 
 <div style="text-align: center; margin: 2em 0;">
   <img src="/images/convmmd-astronomy-scaling.png" alt="convMMD fit to the temperature-richness scaling relation of DES galaxy clusters" style="max-width: 100%; height: auto;">
@@ -68,7 +64,7 @@ The same framework handles regression when *both* variables are measured with er
 
 We apply it to 110 galaxy clusters from the Dark Energy Survey (DES) to estimate the scaling relation between optical richness \\(\lambda_{RM}\\) and hot gas temperature \\(T_X\\), two cluster mass proxies that are both observed with quantified, cluster-specific uncertainty. convMMD faithfully captures the underlying relationship and, on a held-out test set of the best-measured clusters, achieves a lower RMSE (0.24) than the established Bayesian approach <code>linmix</code> (0.26).
 
-## Why it matters
+## Significance
 
 convMMD provides a **unified, likelihood-free, simulation-based framework** for inference under classical measurement error — covering density deconvolution and errors-in-variables regression within a single estimator, and accommodating noise in the covariates, the outcomes, or both. It is competitive with specialized likelihood-based methods under Gaussian noise and noticeably more robust when the noise is not Gaussian.
 
