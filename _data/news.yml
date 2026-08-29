@@ -4,9 +4,9 @@
 #   text:      Supports markdown (links, bold, etc.)
 #   highlight: true → renders in bold, use for big announcements
 
-- date: "June 2026"
-  text: "I am on the **job market** for positions beginning Summer 2027. Please [get in touch](mailto:ritwik.v@utexas.edu) if you'd like to discuss opportunities."
-  highlight: true
+# - date: "June 2026"
+#   text: "I am on the **job market**. Please [get in touch](mailto:ritwik.v@utexas.edu) if you'd like to discuss opportunities."
+#   highlight: true
 
 - date: "June 2026"
   text: "Two new preprints on simulation-based inference: [OASIS](https://arxiv.org/abs/2606.22572) on observation-aware inference with selection biases, and [Nonparametric Deconvolution](https://arxiv.org/abs/2606.21907) on density deconvolution and denoising."
