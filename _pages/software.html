@@ -1,0 +1,71 @@
+---
+layout: archive
+title: "Software"
+permalink: /software/
+author_profile: false
+---
+
+{% include base_path %}
+
+<p class="software-intro">
+  I have developed various statistical and machine learning methods as part of my research. 
+  To make these methods accessible and usable, I have developed open source software 
+  libraries that allows users to easily apply these methods in their own work. 
+  These libraries are available on GitHub, and I welcome contributions and feedback from the community.
+</p>
+
+<section class="software-section" aria-labelledby="python-libraries-heading">
+  <h2 id="python-libraries-heading">Python libraries</h2>
+
+  <div class="software-grid">
+    {% for project in site.data.software %}
+      <article class="software-card">
+        <header class="software-card__header">
+          <div>
+            <p class="software-card__eyebrow">{{ project.tagline }}</p>
+            <h3 class="software-card__title">{{ project.name }}</h3>
+            <p class="software-card__package">
+              <a href="{{ project.repository }}" target="_blank" rel="noopener noreferrer" aria-label="View {{ project.package }} on GitHub">
+                <code>{{ project.package }}</code>
+              </a>
+            </p>
+          </div>
+          <span class="software-card__language">{{ project.language }}</span>
+        </header>
+
+        <p class="software-card__description">{{ project.description }}</p>
+
+        <div class="software-capabilities" aria-label="Key capabilities">
+          {% for capability in project.capabilities %}
+            <div class="software-capability">
+              <h4>{{ capability.title }}</h4>
+              <p>{{ capability.text }}</p>
+            </div>
+          {% endfor %}
+        </div>
+
+        <div class="software-install">
+          <span class="software-install__label">Install from GitHub</span>
+          <code>{{ project.install }}</code>
+        </div>
+
+        <div class="software-card__footer">
+          <ul class="software-meta" aria-label="Project details">
+            {% for requirement in project.requirements %}
+              <li>{{ requirement }}</li>
+            {% endfor %}
+          </ul>
+
+          <div class="software-links">
+            {% for link in project.links %}
+              <a href="{{ link.url }}"{% if link.external %} target="_blank" rel="noopener noreferrer"{% endif %}>
+                <i class="{{ link.icon }}" aria-hidden="true"></i>
+                {{ link.label }}
+              </a>
+            {% endfor %}
+          </div>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>

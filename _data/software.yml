@@ -1,0 +1,35 @@
+- name: "KiTE"
+  package: "kernel_calibration"
+  repository: "https://github.com/ritwikvashistha/kernel_calibration"
+  language: "Python"
+  tagline: "Kernel-based AI Trustworthiness Examiner"
+  description: >-
+    A JAX library for evaluating and improving the local calibration of binary
+    probabilistic classifiers. KiTE helps determine whether a model is locally
+    calibrated, identify the regions where its predictions are over- or
+    under-confident, and learn a recalibration correction when needed.
+  capabilities:
+    - title: "Test"
+      text: "Run a permutation hypothesis test of whether a model is locally calibrated."
+    - title: "Diagnose"
+      text: "Locate calibration bias across the feature space instead of relying only on a global average."
+    - title: "Recalibrate"
+      text: "Fit a lightweight correction that improves local calibration while preserving the original model's signal."
+  requirements:
+    - "Python 3.9+"
+    - "JAX"
+    - "MIT License"
+  install: "pip install git+https://github.com/ritwikvashistha/kernel_calibration.git"
+  links:
+    - label: "Source code"
+      url: "https://github.com/ritwikvashistha/kernel_calibration"
+      icon: "fab fa-github"
+      external: true
+    - label: "Documentation"
+      url: "https://ritwikvashistha.github.io/kernel_calibration/"
+      icon: "fas fa-book-open"
+      external: true
+    - label: "Research paper"
+      url: "/publication/i-trustworthy"
+      icon: "fas fa-file-alt"
+      external: false

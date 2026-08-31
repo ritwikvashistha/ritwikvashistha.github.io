@@ -8,6 +8,7 @@ excerpt: 'This paper proposes a framework of trustworthiness of binary classific
 date: 2024-03-24
 venue: 'AAAI Conference on Artificial Intelligence'
 paperurl: 'https://ojs.aaai.org/index.php/AAAI/article/view/29972'
+codeurl: 'https://github.com/ritwikvashistha/utrustworthy'
 doi: '10.1609/aaai.v38i18.29972'
 keywords:
   - trustworthy AI

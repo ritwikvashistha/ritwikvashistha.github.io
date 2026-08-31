@@ -8,6 +8,7 @@ excerpt: 'Evaluating trustworthiness of probabilistic classifiers using local ca
 date: 2025-05-01
 venue: 'AISTATS (PMLR)'
 paperurl: 'https://arxiv.org/abs/2501.15617'
+codeurl: 'https://github.com/ritwikvashistha/kernel_calibration'
 arxiv: '2501.15617'
 keywords:
   - model calibration
@@ -27,4 +28,4 @@ As probabilistic models continue to permeate various facets of our society and c
 
 ##  Links
 - [Paper PDF](https://arxiv.org/pdf/2501.15617)
-- [Code](https://github.com/ritwikvashistha/I-trustworthy)
+- [Code](https://github.com/ritwikvashistha/kernel_calibration)
